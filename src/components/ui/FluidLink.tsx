@@ -48,7 +48,7 @@ export const FluidLink = ({
     >
       {children}
       <div
-        className="absolute pointer-events-none rounded-full transition-transform duration-1300 ease-out z-0"
+        className="absolute pointer-events-none rounded-full transition-transform duration-900 ease-out z-0"
         style={{
           width: "300%",
           paddingBottom: "300%",

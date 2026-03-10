@@ -1,7 +1,44 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 import { FluidLink } from "@/components/ui/FluidLink";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    }
+  }
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1]
+    } 
+  }
+};
+
+const actionVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: { 
+    opacity: 1, 
+    scale: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1],
+      delay: 0.2
+    } 
+  }
+};
 
 export function HeroSection() {
   return (
@@ -13,42 +50,25 @@ export function HeroSection() {
       <motion.div 
         initial="hidden"
         animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.2,
-            }
-          }
-        }}
+        variants={containerVariants}
         className="relative container mx-auto px-4 text-center z-10"
       >
         <motion.h1 
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-          }}
+          variants={itemVariants}
           className="text-4xl md:text-6xl font-black uppercase text-slate-100 mb-6 drop-shadow-sm"
         >
           Mulai Usaha Anda Dengan <br className="hidden md:block" /> <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-orange-500 drop-shadow-md">Dukungan Penuh</span>
         </motion.h1>
         
         <motion.p 
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-          }}
+          variants={itemVariants}
           className="text-lg md:text-xl sm:text-sm text-slate-100 mb-8 max-w-3xl mx-auto drop-shadow-sm"
         >
           Sagawa Group merancang model kemitraan yang praktis. Anda menerima pelatihan, suplai bahan baku, dan panduan manajemen harian. Maksimalkan potensi keuntungan Anda.
         </motion.p>
         
         <motion.div 
-          variants={{
-            hidden: { opacity: 0, scale: 0.9 },
-            visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
-          }}
+          variants={actionVariants}
           className="flex flex-col sm:flex-row justify-center gap-4"
         >
           <FluidLink 

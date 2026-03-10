@@ -21,10 +21,10 @@ export function Navbar() {
   return (
     <>
       <motion.nav 
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mx-auto px-4 sticky top-0 z-40 w-full bg-white border-b border-gray-100 shadow-sm"
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed top-0 left-0 right-0 z-40 w-full bg-white border-b border-gray-100 shadow-sm"
       >
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           {/* Logo */}

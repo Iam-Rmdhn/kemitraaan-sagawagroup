@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({
         className={`${albertSans.variable} antialiased`}
         suppressHydrationWarning
       >
+        <ScrollProgress />
         <Navbar />
         {children}
         <FloatingWhatsApp />

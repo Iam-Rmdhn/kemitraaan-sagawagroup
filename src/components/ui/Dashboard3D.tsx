@@ -1,6 +1,6 @@
 "use client";
 
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { useTexture, Float, ContactShadows, RoundedBox } from "@react-three/drei";
 import { Suspense, useRef, useEffect } from "react";
 import * as THREE from "three";
@@ -17,6 +17,8 @@ function Screen() {
     }
   });
   const groupRef = useRef<THREE.Group>(null);
+  const { viewport } = useThree();
+  const scale = Math.min(1, viewport.width / 4.6);
 
   useEffect(() => {
     if (!groupRef.current) return;
@@ -39,7 +41,7 @@ function Screen() {
   }, []);
 
   return (
-    <group ref={groupRef} position={[0, 0, 0]}>
+    <group ref={groupRef} position={[0, 0, 0]} scale={scale}>
       <RoundedBox args={[4.4, 3.0, 0.1]} radius={0.1} smoothness={4} position={[0, 0, -0.05]}>
         <meshStandardMaterial color="#1a1a1a" roughness={0.4} metalness={0.6} />
       </RoundedBox>

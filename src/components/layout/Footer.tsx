@@ -1,11 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Instagram, Twitter, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Twitter, Youtube, ArrowUp } from "lucide-react";
 
 export function Footer() {
   const quickLinks = [
     { label: "Home", href: "/" },
-    { label: "Tentang Kami", href: "#" },
+    { label: "Tentang Kami", href: "https://sagawagroup.id/about/", target: "_blank" },
   ];
 
   const partnershipLinks = [
@@ -60,7 +62,7 @@ export function Footer() {
             <ul className="space-y-4">
               {quickLinks.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="group flex items-center text-slate-400 hover:text-red-500 transition-colors text-sm font-medium">
+                  <Link href={link.href} target={link.target} className="group flex items-center text-slate-400 hover:text-red-500 transition-colors text-sm font-medium">
                     <span className="w-0 h-[2px] bg-red-500 transition-all duration-300 ease-out group-hover:w-4 group-hover:mr-2"></span>
                     {link.label}
                   </Link>
@@ -123,9 +125,20 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 gap-4">
-          <p>&copy; {new Date().getFullYear()} by Sagawa Group. Hak Cipta Dilindungi.</p>
-          <div className="flex gap-6">
+        <div className="mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500 gap-6 md:gap-4 relative pb-6 md:pb-0">
+          <p className="flex-1 text-center md:text-left">&copy; {new Date().getFullYear()} by Sagawa Group. Hak Cipta Dilindungi.</p>
+          
+          <div className="flex justify-center md:absolute md:left-1/2 md:-translate-x-1/2">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center transition-all shadow-[0_0_10px_rgba(255,49,49,0.5)] cursor-pointer"
+              aria-label="Kembali ke atas"
+            >
+              <ArrowUp className="w-5 h-5 transition-all duration-300 ease-out hover:-translate-y-1" />
+            </button>
+          </div>
+
+          <div className="flex gap-6 flex-1 justify-center md:justify-end">
             <Link href="#" className="hover:text-slate-300 transition-colors">Syarat & Ketentuan</Link>
             <Link href="#" className="hover:text-slate-300 transition-colors">Kebijakan Privasi</Link>
           </div>
