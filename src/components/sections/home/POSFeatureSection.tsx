@@ -30,7 +30,9 @@ export function POSFeatureSection() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
+    <section 
+    id="pos-feature"
+    className="py-24 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4 mb-32">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
           <motion.div 

@@ -81,7 +81,9 @@ export function PartnershipChoicesSection() {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section 
+    id="partnership"
+    className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4 mb-16 relative">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

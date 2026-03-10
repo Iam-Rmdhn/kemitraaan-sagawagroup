@@ -6,7 +6,34 @@
   --tertiary-color: #F8AE61;
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Kemitraan Color */
+  --kagawaricebowl-color: #E65100;
+  --kagawaricebowl-color-hover: #BF360C;
+
+  --kagawacoffee-color: #5D4037;
+  --kagawacoffee-color-hover: #4E342E;
+
+  --kagawacoffeebowl-color: #3E2723;
+  --secondary-kagawacoffeebowl-color: #4BA54C;
+  --kagawacoffeebowl-color-hover: #2D1B18;
+
+  --rmn-color: #2E7D32;
+  --rmn-color-hover: #1B5E20;
+
+  --warnas-color: #3FA917;
+  --warnas-color-hover: #2F850B;
+
+  --masgaw-color: #EDEC3F;
+  --masgaw-color-hover: #FECE00;
+
+  --masakanmasgawa-color: #E8D580;
+  --masakanmasgawa-color-hover: #D3A642;
+
+  --independent-color: #1565C0;
+  --independent-color-hover: #0D47A1;
 }
+
 
 body {
   background: var(--background);

@@ -13,11 +13,8 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Beranda", href: "/" },
-    { name: "Kagawa Rice Bowl", href: "/kagawa-rice-bowl" },
-    { name: "Kagawa Coffee", href: "#detail-1" },
-    { name: "Coffee & Rice Bowl", href: "#detail-2" },
-    { name: "RM Nusantara", href: "#detail-3" },
-    { name: "Independent Brand", href: "#detail-4" },
+    { name: "Paket Kemitraan", href: "/paket-kemitraan" },
+    { name: "Testimoni", href: "#testimoni" },
     { name: "Hubungi Kami", href: "#contact" },
   ];
 
@@ -44,6 +41,18 @@ export function Navbar() {
             </Link>
           </div>
 
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-bold text-slate-600 hover:text-red-600 transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
           <div className="flex items-center gap-4">
             <Link
               href="#contact"
@@ -54,7 +63,7 @@ export function Navbar() {
             
             <button 
               onClick={toggleDrawer}
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
+              className="inline-flex md:hidden items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
             >
               <span className="sr-only">Open main menu</span>
               <Menu className="h-6 w-6" aria-hidden="true" />
@@ -97,7 +106,7 @@ export function Navbar() {
               
               <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-1">
                 <div className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
-                  Pilihan Kemitraan
+                  Menu Utama
                 </div>
                 {navLinks.map((link) => (
                   <Link
