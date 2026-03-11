@@ -29,7 +29,6 @@ export function ScrollProgress() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     
-    // Initial fetch
     updateProgress();
 
     return () => window.removeEventListener("scroll", handleScroll);

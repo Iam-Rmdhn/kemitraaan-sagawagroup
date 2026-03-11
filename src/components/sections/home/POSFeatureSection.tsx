@@ -78,7 +78,7 @@ export function POSFeatureSection() {
             </motion.div>
           </motion.div>
 
-          {/* Mockup POS Image */}
+          {/* Mockup POS */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9, x: 50 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}

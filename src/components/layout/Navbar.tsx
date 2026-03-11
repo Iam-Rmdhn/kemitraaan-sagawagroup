@@ -14,8 +14,8 @@ export function Navbar() {
   const navLinks = [
     { name: "Beranda", href: "/" },
     { name: "Paket Kemitraan", href: "/paket-kemitraan" },
-    { name: "Testimoni", href: "#testimoni" },
-    { name: "Hubungi Kami", href: "#contact" },
+    { name: "Testimoni", href: "/#testimoni" },
+    { name: "Hubungi Kami", href: "/hubungi-kami" },
   ];
 
   return (
@@ -55,7 +55,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="#contact"
+              href="/hubungi-kami"
               className="hidden sm:inline-flex h-9 items-center justify-center rounded-full bg-red-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-red-700 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
             >
               Hubungi Kami
@@ -125,7 +125,7 @@ export function Navbar() {
                   Siap memulai bisnis FnB Anda bersama Sagawa Group?
                 </p>
                 <Link
-                  href="#contact"
+                  href="/hubungi-kami"
                   onClick={toggleDrawer}
                   className="w-full flex justify-center items-center h-12 rounded-full bg-red-600 px-4 text-sm font-bold text-white shadow-md transition-colors hover:bg-red-700"
                 >

@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function PartnershipChoicesSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
   
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -121,12 +122,13 @@ export function PartnershipChoicesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              onClick={() => setActiveCard(activeCard === index ? null : index)}
               className="relative group overflow-hidden rounded-4xl w-[85vw] sm:w-[360px] shrink-0 h-[480px] bg-stone-900 snap-center shadow-xl border border-stone-800 cursor-pointer"
             >
               <div className="absolute inset-0 bg-linear-to-br from-stone-800 to-stone-950 opacity-50 z-0"></div>         
-              <div className="absolute inset-0 bg-linear-to-t from-red-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+              <div className={`absolute inset-0 bg-linear-to-t from-red-950/80 via-transparent to-transparent transition-opacity duration-500 z-0 ${activeCard === index ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent z-10"></div>
-              <div className="absolute inset-x-0 bottom-0 p-8 z-20 flex flex-col justify-end h-full transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:-translate-y-48 sm:group-hover:-translate-y-40">
+              <div className={`absolute inset-x-0 bottom-0 p-8 z-20 flex flex-col justify-end h-full transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] sm:group-hover:-translate-y-40 ${activeCard === index ? '-translate-y-48 sm:-translate-y-40' : 'group-hover:-translate-y-48'}`}>
                 <h3 className="text-2xl font-bold text-white mb-2 leading-snug">
                   {pkg.title}
                 </h3>
@@ -135,7 +137,7 @@ export function PartnershipChoicesSection() {
                 </p>
               </div>
 
-            <div className="absolute left-0 bottom-0 w-full p-8 z-20 translate-y-full opacity-0 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:translate-y-0 group-hover:opacity-100 flex flex-col justify-end">
+            <div className={`absolute left-0 bottom-0 w-full p-8 z-20 flex flex-col justify-end transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${activeCard === index ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100'}`}>
                 <p className="text-gray-300 text-sm leading-relaxed mb-6 line-clamp-4">
                   {pkg.description}
                 </p>
