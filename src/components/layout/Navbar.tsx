@@ -14,7 +14,6 @@ export function Navbar() {
   const navLinks = [
     { name: "Beranda", href: "/" },
     { name: "Paket Kemitraan", href: "/paket-kemitraan" },
-    { name: "Testimoni", href: "/#testimoni" },
     { name: "Hubungi Kami", href: "/hubungi-kami" },
   ];
 
