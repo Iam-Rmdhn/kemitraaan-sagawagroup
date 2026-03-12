@@ -9,6 +9,7 @@ export function PaketKemitraanListSection() {
   const packages = [
     {
       id: "krb",
+      slug: "kagawa-ricebowl",
       name: "Kagawa Rice Bowl",
       color: "var(--kagawaricebowl-color)",
       image: "/assets/img/gerai/kagawa-ricebowl.webp",
@@ -26,6 +27,7 @@ export function PaketKemitraanListSection() {
     },
     {
       id: "kc",
+      slug: "kagawa-coffee",
       name: "Kagawa Coffee Conner",
       color: "var(--kagawacoffee-color)",
       image: "/assets/img/gerai/kagawa-coffee-conner.webp",
@@ -43,6 +45,7 @@ export function PaketKemitraanListSection() {
     },
     {
       id: "kcrb",
+      slug: "kagawa-coffee-ricebowl",
       name: "Kagawa Coffee & Rice Bowl Conner",
       color: "var(--kagawacoffeebowl-color)",
       image: "/assets/img/gerai/coffee-ricebowl.webp",
@@ -60,6 +63,7 @@ export function PaketKemitraanListSection() {
     },
     {
       id: "rmn",
+      slug: "rm-nusantara",
       name: "RM Nusantara",
       color: "var(--rmn-color)",
       image: "/assets/img/gerai/warnas.webp",
@@ -77,6 +81,7 @@ export function PaketKemitraanListSection() {
     },
     {
       id: "ib",
+      slug: "independent-brand",
       name: "Independent Brand",
       color: "var(--independent-color)",
       image: "/assets/img/gerai/indepandent.webp",
@@ -181,7 +186,7 @@ export function PaketKemitraanListSection() {
 
             <div className="flex flex-col sm:flex-row gap-3 w-full mt-auto relative z-20">
               <FluidLink 
-                href={`#paket-${pkg.id}`}
+                href={`/paket-kemitraan/${pkg.slug}`}
                 className="group/btn-detail flex-1 flex items-center justify-center py-3.5 px-4 rounded-xl font-bold transition-all active:scale-[0.98] border-2 bg-white"
                 style={{ borderColor: pkg.color, color: pkg.color }}
                 fluidColor={pkg.color}

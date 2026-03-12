@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export function PartnershipChoicesSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -54,30 +55,35 @@ export function PartnershipChoicesSection() {
       subtitle: "Premium Japanese Rice Bowl Experience",
       description:
         "Kagawa Rice Bowl menggabungkan kelezatan autentik Jepang dengan sentuhan unik Nusantara, menciptakan sebuah konsep bisnis kuliner yang kuat dan mudah diterima pasar. Dengan menu andalan yang inovatif, kami tidak hanya membangun basis pelanggan yang loyal, tetapi juga membuka sebuah peluang nyata untuk kesuksesan bersama di industri kuliner yang terus berkembang.",
+      slug: "kagawa-ricebowl",
     },
     {
       title: "Kagawa Coffee Corner",
       subtitle: "Artisan Coffee & Specialty Drinks",
       description:
         "Kagawa Coffee Corner menawarkan pengalaman coffee premium dengan specialty drinks dan atmosfer yang nyaman. Menghadirkan berbagai metode brewing, biji kopi pilihan, dan menu minuman kreatif yang menjadi tempat favorit untuk hangout, meeting, atau me time di tengah kesibukan sehari-hari.",
+      slug: "kagawa-coffee",
     },
     {
       title: "Kagawa Coffee & Rice Bowl Corner",
       subtitle: "Complete F&B Solution",
       description:
         "Kagawa Coffee & Rice Bowl Corner menghadirkan solusi bisnis F&B yang lengkap dengan menggabungkan kekuatan coffee premium dan rice bowl dalam satu konsep terintegrasi. Memaksimalkan revenue stream dengan menyajikan menu lengkap yang memenuhi kebutuhan pelanggan dari pagi hingga malam.",
+      slug: "kagawa-coffee-ricebowl",
     },
     {
       title: "RM Nusantara",
       subtitle: "WarNas/Warteg, Mas Gaw dan RM Sunda",
       description:
         "RM Nusantara menawarkan kelezatan otentik Indonesia dengan berbagai masakan daerah, menciptakan sebuah konsep bisnis kuliner yang melestarikan kekayaan kuliner nusantara. Dengan menu andalan yang bervariasi, kami tidak hanya memperkenalkan cita rasa lokal, tetapi juga membuka peluang nyata untuk kesuksesan bersama.",
+      slug: "sedang-dibangun",
     },
     {
       title: "Independent Brand",
       subtitle: "Custom Business Solutions",
       description:
         "Independent Brand membuka peluang bagi Anda untuk mengembangkan brand kuliner unik dengan dukungan SagawaGroup, menciptakan sebuah konsep bisnis kuliner yang sesuai dengan visi dan passion Anda. Dengan pendampingan yang komprehensif, kami memberikan dukungan penuh untuk kesuksesan jangka panjang.",
+      slug: "independent-brand",
     },
   ];
 
@@ -142,12 +148,12 @@ export function PartnershipChoicesSection() {
                   {pkg.description}
                 </p>
                 <div className="pt-4 border-t border-stone-700/50 mt-auto">
-                  <a href={`#detail-${index}`} className="group/btn inline-flex items-center text-sm font-bold tracking-wide text-white uppercase transition">
+                  <Link href={`/paket-kemitraan/${pkg.slug}`} className="group/btn inline-flex items-center text-sm font-bold tracking-wide text-white uppercase transition">
                     Lihat Detail
                     <span className="ml-2 w-8 h-8 rounded-full bg-red-600 flex items-center justify-center group-hover/btn:bg-red-500 transition-colors">
                       <ArrowRight className="w-4 h-4" />
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>
