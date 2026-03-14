@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "Kagawa Rice Bowl",
     "Kagawa Coffee",
     "RM Nusantara",
+    "Independent Brand",
+    "Mas Gaw",
+    "Warnas",
+    "Warung Selera Nusantara",
+    "Masakan Mas Gawa",
     "Franchise Makanan Jepang"
   ],
   authors: [{ name: "Sagawa Group" }],
