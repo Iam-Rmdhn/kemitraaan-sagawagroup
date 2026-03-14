@@ -51,6 +51,7 @@ export function HeroKrb() {
                 src="/assets/logos/kagawa-ricebowl.webp" 
                 alt="Kagawa Rice Bowl Logo"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain"
                 priority
               />

@@ -39,7 +39,7 @@ export function ContactHubungiKami() {
     {
       icon: <Mail className="w-6 h-6 text-slate-700" strokeWidth={1.5} />,
       title: "Email",
-      details: "info@sagawagroup.com",
+      details: "info@sagawagroup.id",
     },
     {
       icon: <MapPin className="w-6 h-6 text-slate-700" strokeWidth={1.5} />,

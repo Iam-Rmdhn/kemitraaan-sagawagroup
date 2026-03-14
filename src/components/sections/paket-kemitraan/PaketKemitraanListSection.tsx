@@ -66,7 +66,7 @@ export function PaketKemitraanListSection() {
       slug: "rm-nusantara",
       name: "RM Nusantara",
       color: "var(--rmn-color)",
-      image: "/assets/img/gerai/warnas.webp",
+      image: "/assets/img/gerai/all-rmn.webp",
       originalPrice: 199000000,
       discountPrice: 139000000,
       features: [

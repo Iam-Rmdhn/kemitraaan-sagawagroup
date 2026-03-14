@@ -3,6 +3,7 @@ import { HeroKcrb } from "@/components/sections/kagawa-coffee-ricebowl/HeroKcrb"
 import { AboutKcrb } from "@/components/sections/kagawa-coffee-ricebowl/AboutKcrb";
 import { MenuKcrb } from "@/components/sections/kagawa-coffee-ricebowl/MenuKcrb";
 import { BenefitKcrb } from "@/components/sections/kagawa-coffee-ricebowl/BenefitKcrb";
+import { TimelineSection } from "@/components/sections/shared/TimelineSection";
 
 export const metadata: Metadata = {
   title: "Kagawa Coffee & Rice Bowl Conner - Paket Kemitraan Sagawa Group",
@@ -15,6 +16,7 @@ export default function KagawaCoffeeRiceBowlPage() {
       <HeroKcrb />
       <AboutKcrb />
       <MenuKcrb />
+      <TimelineSection />
       <BenefitKcrb />
     </div>
   );

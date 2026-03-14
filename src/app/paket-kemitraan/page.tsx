@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { PaketKemitraanHeroSection } from "@/components/sections/paket-kemitraan/PaketKemitraanHeroSection";
 import { PaketKemitraanListSection } from "@/components/sections/paket-kemitraan/PaketKemitraanListSection";
+import { TimelineSection } from "@/components/sections/shared/TimelineSection";
 
 export const metadata: Metadata = {
   title: "Pilih Paket Kemitraan - Sagawa Group",
@@ -12,6 +13,7 @@ export default function PaketKemitraanPage() {
     <div className="min-h-screen bg-slate-50">
       <PaketKemitraanHeroSection />
       <PaketKemitraanListSection />
+      <TimelineSection />
     </div>
   );
 }
