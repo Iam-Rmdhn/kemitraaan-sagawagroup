@@ -11,11 +11,11 @@ export function Footer() {
   ];
 
   const partnershipLinks = [
-    { label: "Kagawa Rice Bowl", href: "#" },
-    { label: "Kagawa Coffee Conner", href: "#" },
-    { label: "Kagawa Coffe & Rice Bowl Conner", href: "#" },
-    { label: "RM Nusantara", href: "#" },
-    { label: "Independent Brand", href: "#" },
+    { label: "Kagawa Rice Bowl", href: "/paket-kemitraan/kagawa-ricebowl" },
+    { label: "Kagawa Coffee Conner", href: "/paket-kemitraan/kagawa-coffee" },
+    { label: "Kagawa Coffe & Rice Bowl Conner", href: "/paket-kemitraan/kagawa-coffee-ricebowl" },
+    { label: "RM Nusantara", href: "/paket-kemitraan/rm-nusantara" },
+    { label: "Independent Brand", href: "/paket-kemitraan/independent-brand" },
   ];
 
   return (
