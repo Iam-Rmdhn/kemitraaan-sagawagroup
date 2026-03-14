@@ -76,7 +76,7 @@ export function PartnershipChoicesSection() {
       subtitle: "WarNas/Warteg, Mas Gaw dan RM Sunda",
       description:
         "RM Nusantara menawarkan kelezatan otentik Indonesia dengan berbagai masakan daerah, menciptakan sebuah konsep bisnis kuliner yang melestarikan kekayaan kuliner nusantara. Dengan menu andalan yang bervariasi, kami tidak hanya memperkenalkan cita rasa lokal, tetapi juga membuka peluang nyata untuk kesuksesan bersama.",
-      slug: "sedang-dibangun",
+      slug: "rm-nusantara",
     },
     {
       title: "Independent Brand",

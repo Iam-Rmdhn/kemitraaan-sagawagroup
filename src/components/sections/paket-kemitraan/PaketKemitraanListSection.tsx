@@ -91,7 +91,8 @@ export function PaketKemitraanListSection() {
         "Konsultasi Bisnis Mendalam", 
         "Dibantu Mencari Lokasi Strategis", 
         "Sistem Operasional Outlet Custom",
-        "SOP & Training Sesuai Kebutuhan"
+        "SOP & Training Sesuai Kebutuhan",
+        "Lisensi Seumur Hidup"
       ]
     }
   ];

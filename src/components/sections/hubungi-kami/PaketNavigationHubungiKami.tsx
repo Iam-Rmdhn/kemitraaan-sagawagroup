@@ -10,31 +10,31 @@ export function PaketNavigationHubungiKami() {
       id: "krb",
       name: "Kagawa Rice Bowl",
       color: "var(--kagawaricebowl-color)",
-      href: "/paket-kemitraan#paket-krb",
+      href: "/paket-kemitraan/kagawa-ricebowl",
     },
     {
       id: "kc",
       name: "Kagawa Coffee Conner",
       color: "var(--kagawacoffee-color)",
-      href: "/paket-kemitraan#paket-kc",
+      href: "/paket-kemitraan/kagawa-coffee",
     },
     {
       id: "kcrb",
       name: "Kagawa Coffee & Rice Bowl Conner",
       color: "var(--kagawacoffeebowl-color)",
-      href: "/paket-kemitraan#paket-kcrb",
+      href: "/paket-kemitraan/kagawa-coffee-ricebowl",
     },
     {
       id: "rmn",
       name: "RM Nusantara",
       color: "var(--rmn-color)",
-      href: "/paket-kemitraan#paket-rmn",
+      href: "/paket-kemitraan/rm-nusantara",
     },
     {
       id: "ib",
       name: "Independent Brand",
       color: "var(--independent-color)",
-      href: "/paket-kemitraan#paket-ib",
+      href: "/paket-kemitraan/independent-brand",
     },
   ];
 
