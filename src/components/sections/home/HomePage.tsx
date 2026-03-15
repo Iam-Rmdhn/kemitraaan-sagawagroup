@@ -49,7 +49,7 @@ export function HeroSection() {
     <section 
       id="beranda" 
       className="relative w-full min-h-screen flex flex-col justify-center pt-24 pb-16 md:pt-32 md:pb-24 bg-[url('/assets/img/hero-bg.webp')] bg-cover bg-center bg-no-repeat">
-      <div className="absolute inset-0 dark:bg-black/40 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/50 dark:bg-black/60 backdrop-blur-sm" />
       
       <motion.div 
         initial="hidden"
