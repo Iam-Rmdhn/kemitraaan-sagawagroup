@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, ArrowLeft, TrendingUp, Monitor, MessageCircleHeart } from "lucide-react";
+import { ChevronRight, ArrowLeft } from "lucide-react";
 
 export function HeroRmn() {
   const brandColor = "var(--rmn-color)";
@@ -63,17 +63,47 @@ export function HeroRmn() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-4 lg:mb-6 drop-shadow-sm tracking-tight text-balance"
             >
-              Peluang Bisnis <span style={{ color: brandColor }}>Kuliner Otentik</span> Indonesia
+              Bangun Bisnis Rumah Makan Nusantara dengan<span className="text-red-500 underline decoration-red-200 underline-offset-4"> System Autopilot</span>, Balik Modal Dalam 10 Bulan
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-8 lg:mb-10 max-w-xl text-balance"
+              className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl text-balance"
             >
-              Cita rasa daerah terbaik dengan manajemen modern. Dapatkan keuntungan istimewa membuka cabang rumah makan terlaris.
+              Gabungkan kelezatan otentik dengan manajemen modern.Tanpa perlu jago masak, kami siapkan sistem operasional hingga suplai bahan baku untuk Anda.
             </motion.p>
+            
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="mb-10 lg:mb-12 relative flex justify-center lg:justify-start w-full lg:w-auto"
+            >
+              <div className="relative inline-block group">
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+                  <div className="relative flex flex-col items-center">
+                    <div className="bg-linear-to-r from-yellow-400 to-amber-500 text-amber-950 text-[10px] sm:text-xs font-black uppercase tracking-wider px-4 py-1.5 rounded-xl shadow-lg relative z-10 whitespace-nowrap">
+                      Konsultasi Gratis!
+                    </div>
+                    <div className="w-3 h-3 bg-amber-500 rotate-45 -mt-2 shadow-sm relative z-0 rounded-[2px]" />
+                  </div>
+                </div>
+
+                <a 
+                  href="https://wa.me/6281234567890?text=Halo%20Sagawa%20Group,%20saya%20tertarik%20dengan%20info%20Kemitraan%20RM%20Nusantara%20beserta%20promonya..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 sm:px-10 py-4 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:bg-slate-800 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] overflow-hidden"
+                >
+                  <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block" />
+                  Klaim Promo Sekarang
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </motion.div>
             
             {/* Stats */}
             <motion.div 
@@ -84,27 +114,18 @@ export function HeroRmn() {
             >
                 {/* Stat 1 */}
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left transition-transform hover:-translate-y-1 duration-300">
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: `${brandColor}15`, color: brandColor }}>
-                    <TrendingUp className="w-6 h-6" />
-                  </div>
                   <h4 className="text-2xl font-black text-slate-900 mb-1">{"< 1"} <span className="text-xl">Tahun</span></h4>
                   <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Balik Modal</p>
                 </div>
                 
                 {/* Stat 2 */}
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left transition-transform hover:-translate-y-1 duration-300">
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: `${brandColor}15`, color: brandColor }}>
-                    <Monitor className="w-6 h-6" />
-                  </div>
                   <h4 className="text-2xl font-black text-slate-900 mb-1">24/7</h4>
                   <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Support</p>
                 </div>
                 
                 {/* Stat 3 */}
                 <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left col-span-2 sm:col-span-1 transition-transform hover:-translate-y-1 duration-300">
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{ backgroundColor: `${brandColor}15`, color: brandColor }}>
-                    <MessageCircleHeart className="w-6 h-6" />
-                  </div>
                   <h4 className="text-2xl font-black text-slate-900 mb-1">99%</h4>
                   <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Kepuasan</p>
                 </div>

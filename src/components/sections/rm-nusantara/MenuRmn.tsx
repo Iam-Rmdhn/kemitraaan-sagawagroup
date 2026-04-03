@@ -63,6 +63,7 @@ export function MenuRmn() {
                   src={menu.image}
                   alt={menu.name}
                   fill
+                  loading="eager"
                   className="object-contain"
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 16vw"
                 />
