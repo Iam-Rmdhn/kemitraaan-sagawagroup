@@ -279,7 +279,7 @@ export default function PricingTabsRmn() {
           </div>
         </motion.div>
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-nowrap overflow-x-auto justify-center scrollbar-hide border-b border-white/20 mb-8 sm:mb-12 relative pb-1">
+          <div className="flex flex-nowrap overflow-x-auto justify-start md:justify-center scrollbar-hide border-b border-white/20 mb-8 sm:mb-12 relative pb-1 hide-scrollbar">
             {TAB_DATA.map((tab, idx) => {
               const isActive = activeTab === idx;
               return (

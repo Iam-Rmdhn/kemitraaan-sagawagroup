@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { LightbulbIcon} from 'lucide-react';
 
 export default function RoiSectionRmn() {
   const roiData = [
@@ -66,7 +65,6 @@ export default function RoiSectionRmn() {
         >
           <div className="p-6 md:p-8 flex-1">
             <h3 className="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
-              <LightbulbIcon className="w-5 h-5 text-yellow-500 mr-3 shrink-0" />
               Rincian Initial Investment (Financial Project)
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
@@ -181,7 +179,7 @@ export default function RoiSectionRmn() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative mt-12 sm:mt-16 bg-[#FFF9CC] p-6 sm:p-10 max-w-4xl mx-auto shadow-xl border border-amber-200/50"
         >
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-red-200/50 backdrop-blur-md shadow-sm -rotate-3 border border-white/30" 
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-red-200/50 backdrop-blur-md shadow-sm -rotate-6 border border-white/30" 
             style={{ clipPath: 'polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)' }} />
           <div className="absolute bottom-0 right-0 w-0 h-0 border-b-30 border-l-30 border-b-slate-50 border-l-[#F2ECB8] shadow-[-2px_-2px_4px_rgba(0,0,0,0.05)]" />
 
