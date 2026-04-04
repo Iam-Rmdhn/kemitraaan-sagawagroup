@@ -82,23 +82,19 @@ export function HeroSection() {
             fluidColor="#b91c1c"
           >
             <span className="relative z-10 font-semibold tracking-wide">
-              Gabung Kemitraan
+              Gabung Sekarang
             </span>
           </FluidLink>
           
           <FluidLink 
-            href="#pos-feature"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector('#pos-feature')?.scrollIntoView({ behavior: 'smooth' });
-            }}
+            href="/paket-kemitraan"
             className="group/btn-secondary inline-flex items-center justify-center text-slate-100 hover:text-slate-900 px-8 py-3 rounded-full font-medium border border-gray-200 shadow-md transition-colors duration-300 active:scale-[0.98] cursor-pointer"
             fluidColor="#ffffff"
           >
             <span className="relative z-10 font-semibold tracking-wide">
-              Pelajari Lebih Lanjut
+              Lihat Paket
             </span>
-          </FluidLink>
+          </FluidLink>  
         </motion.div>
       </motion.div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-50 to-transparent pointer-events-none z-20 backdrop-blur-[2px] mask-[linear-gradient(to_top,black,transparent)]" />

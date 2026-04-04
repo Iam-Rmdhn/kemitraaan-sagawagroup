@@ -80,10 +80,10 @@ export function HeroRmn() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
-              className="mb-10 lg:mb-12 relative flex justify-center lg:justify-start w-full lg:w-auto"
+              className="mb-4 lg:mb-6 relative flex justify-center lg:justify-start w-full lg:w-auto"
             >
               <div className="relative inline-block group">
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 animate-bounce z-20 pointer-events-none">
                   <div className="relative flex flex-col items-center">
                     <div className="bg-linear-to-r from-yellow-400 to-amber-500 text-amber-950 text-[10px] sm:text-xs font-black uppercase tracking-wider px-4 py-1.5 rounded-xl shadow-lg relative z-10 whitespace-nowrap">
                       Konsultasi Gratis!
@@ -103,32 +103,6 @@ export function HeroRmn() {
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </motion.div>
-            
-            {/* Stats */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 w-full"
-            >
-                {/* Stat 1 */}
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left transition-transform hover:-translate-y-1 duration-300">
-                  <h4 className="text-2xl font-black text-slate-900 mb-1">{"< 1"} <span className="text-xl">Tahun</span></h4>
-                  <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Balik Modal</p>
-                </div>
-                
-                {/* Stat 2 */}
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left transition-transform hover:-translate-y-1 duration-300">
-                  <h4 className="text-2xl font-black text-slate-900 mb-1">24/7</h4>
-                  <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Support</p>
-                </div>
-                
-                {/* Stat 3 */}
-                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left col-span-2 sm:col-span-1 transition-transform hover:-translate-y-1 duration-300">
-                  <h4 className="text-2xl font-black text-slate-900 mb-1">99%</h4>
-                  <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Kepuasan</p>
-                </div>
             </motion.div>
           </div>
 
@@ -166,6 +140,31 @@ export function HeroRmn() {
                 <Image src="/assets/logos/masakan mas gawa.webp" alt="Masakan Mas Gawa Logo" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
               </div>
             </div>
+            {/* Stats */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 p-2 mt-4"
+            >
+                {/* Stat 1 */}
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left transition-transform hover:-translate-y-1 duration-300">
+                  <h4 className="text-2xl font-black text-slate-900 mb-1">{"< 1"} <span className="text-xl">Tahun</span></h4>
+                  <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Balik Modal</p>
+                </div>
+                
+                {/* Stat 2 */}
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left transition-transform hover:-translate-y-1 duration-300">
+                  <h4 className="text-2xl font-black text-slate-900 mb-1">24/7</h4>
+                  <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Support</p>
+                </div>
+                
+                {/* Stat 3 */}
+                <div className="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm flex flex-col items-center lg:items-start text-center lg:text-left col-span-2 sm:col-span-1 transition-transform hover:-translate-y-1 duration-300">
+                  <h4 className="text-2xl font-black text-slate-900 mb-1">99%</h4>
+                  <p className="text-[11px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest leading-snug">Kepuasan</p>
+                </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

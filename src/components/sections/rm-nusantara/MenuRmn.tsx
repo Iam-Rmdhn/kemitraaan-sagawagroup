@@ -41,7 +41,7 @@ export function MenuRmn() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4 drop-shadow-sm tracking-tight text-balance">
-            Menu <span style={{ color: brandColor }}>Otentik Nusantara</span>
+            20+ Menu <span style={{ color: brandColor }}>Otentik Nusantara</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto text-balance">
             Dari racikan bumbu rahasia warisan leluhur, tersaji aneka hidangan menggugah selera yang dipastikan mencuri hati pelanggan Anda.
