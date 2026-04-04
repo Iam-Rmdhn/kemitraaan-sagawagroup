@@ -42,7 +42,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.filter(link => link.name !== "Tentang Kami").map((link) => (
               <Link
                 key={link.name}
                 href={link.href}

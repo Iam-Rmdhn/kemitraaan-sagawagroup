@@ -6,6 +6,7 @@ import { MenuRmn } from "@/components/sections/rm-nusantara/MenuRmn";
 import { ProblemSolutionRmn } from "@/components/sections/rm-nusantara/ProblemSolutionRmn";
 import PricingTabsRmn from "@/components/sections/rm-nusantara/PricingTabsRmn";
 import RoiSectionRmn from "@/components/sections/rm-nusantara/RoiSectionRmn";
+import { GalleryRmn } from "@/components/sections/rm-nusantara/GalleryRmn";
 import { FaqRmn } from "@/components/sections/rm-nusantara/FaqRmn";
 import { TimelineSection } from "@/components/sections/shared/TimelineSection";
 
@@ -25,6 +26,7 @@ export default function RmNusantaraPage() {
       <ProblemSolutionRmn />
       <PricingTabsRmn />
       <RoiSectionRmn />
+      <GalleryRmn />
       <FaqRmn />
     </div>
   );

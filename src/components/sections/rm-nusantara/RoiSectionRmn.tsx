@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { AlertCircle, LightbulbIcon} from 'lucide-react';
+import { LightbulbIcon} from 'lucide-react';
 
 export default function RoiSectionRmn() {
   const roiData = [
@@ -174,17 +174,27 @@ export default function RoiSectionRmn() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30, rotate: -2 }}
+          whileInView={{ opacity: 1, y: 0, rotate: 1 }}
+          whileHover={{ rotate: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-start gap-4 bg-amber-50/70 p-5 sm:p-6 rounded-2xl border border-amber-200/50 max-w-5xl mx-auto shadow-sm"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative mt-12 sm:mt-16 bg-[#FFF9CC] p-6 sm:p-10 max-w-4xl mx-auto shadow-xl border border-amber-200/50"
         >
-          <AlertCircle className="w-6 h-6 text-amber-500 shrink-0 mt-0.5 hidden md:block" />
-          <p className="text-xs sm:text-sm text-amber-800 leading-relaxed font-medium">
-            <span className="font-bold">Catatan Pendukung Skenario:</span> <br className="sm:hidden"/> 
-            Perhitungan di atas adalah estimasi simulasi rata-rata outlet RM Nusantara. ROI dihitung dengan pembagian Total Initial Investment di luar Sewa Tempat. Omset dan laba bersih aktual dapat bervariasi bergantung pada pemilihan lokasi strategis, efektivitas promosi lokal, manajemen stok (HPP aktual), kualitas pelayanan, serta kondisi daya beli di wilayah masing-masing outlet.
-          </p>
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-red-200/50 backdrop-blur-md shadow-sm -rotate-3 border border-white/30" 
+            style={{ clipPath: 'polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)' }} />
+          <div className="absolute bottom-0 right-0 w-0 h-0 border-b-30 border-l-30 border-b-slate-50 border-l-[#F2ECB8] shadow-[-2px_-2px_4px_rgba(0,0,0,0.05)]" />
+
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 relative z-10">
+            <div>
+              <h4 className="font-bold text-lg sm:text-2xl text-slate-800 mb-3 font-serif italic border-b border-amber-300 pb-2 inline-block">
+                Catatan Penting Skenario
+              </h4>
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                Perhitungan di atas adalah estimasi simulasi rata-rata outlet RM Nusantara. ROI dihitung dengan pembagian <strong className="text-slate-900 border-b border-amber-400">Total Initial Investment</strong> di luar Sewa Tempat. Omset dan laba bersih aktual dapat bervariasi bergantung pada pemilihan lokasi strategis, efektivitas promosi lokal, manajemen stok (HPP aktual), kualitas pelayanan, serta kondisi daya beli di wilayah masing-masing outlet.
+              </p>
+            </div>
+          </div>
         </motion.div>
 
       </div>
