@@ -151,7 +151,7 @@ export default function RoiSectionRmn() {
                       <td className={`py-3 px-4 text-sm sm:text-[15px] text-center border-l border-slate-100/70 ${textStrong ? 'font-bold text-slate-800' : 'text-slate-600'}`}>
                         {row.pesimis}
                       </td>
-                      <td className={`py-3 px-4 text-sm sm:text-[15px] text-center border-x relative z-0 ${row.isYellow || (row.isHighlight && row.isProfit) ? 'border-transparent' : 'bg-red-50/30 border-red-100/30'} flex flex-col justify-center h-full`}>
+                      <td className={`py-3 px-4 text-sm sm:text-[15px] text-center border-x relative z-0 ${row.isYellow || (row.isHighlight && row.isProfit) ? 'border-transparent' : 'bg-green-50/30 border-green-100/30'} flex flex-col justify-center h-full`}>
                         {row.isHighlight && row.isProfit ? (
                           <span className="inline-block px-3 py-1.5 bg-green-100 text-green-800 rounded-lg font-black text-base shadow-sm mx-auto">
                             {row.normal}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { ExternalLink, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
@@ -15,6 +15,7 @@ export function Navbar() {
     { name: "Beranda", href: "/" },
     { name: "Paket Kemitraan", href: "/paket-kemitraan" },
     { name: "Hubungi Kami", href: "/hubungi-kami" },
+    { name: "Tentang Kami", href: "https://sagawagroup.id/about/" },
   ];
 
   return (
@@ -54,10 +55,12 @@ export function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="/hubungi-kami"
+              href="https://sagawagroup.id/about/"
               className="hidden sm:inline-flex h-9 items-center justify-center rounded-full bg-red-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-red-700 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+              target="_blank"
             >
-              Hubungi Kami
+              Tentang Kami
+              <ExternalLink className="w-4 h-4 ml-1" />
             </Link>
             
             <button 
@@ -80,7 +83,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm"
+              className="fixed inset-0 bg-black/40 z-100 backdrop-blur-sm"
               onClick={toggleDrawer}
             />
 
@@ -90,7 +93,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
-              className="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white z-50 shadow-2xl flex flex-col"
+              className="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white z-100 shadow-2xl flex flex-col"
             >
               <div className="flex items-center justify-between p-4 px-6 border-b border-gray-100">
                 <span className="font-bold text-gray-900 text-lg">Menu Navigasi</span>
