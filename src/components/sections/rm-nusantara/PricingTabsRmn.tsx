@@ -384,7 +384,7 @@ export default function PricingTabsRmn() {
                         {/* CTA */}
                         <div className="mt-auto pt-2 relative z-10">
                           <FluidLink
-                            href={`https://wa.me/6281234567890?text=Halo%20Sagawa%20Group,%20saya%20tertarik%20dengan%20info%20Kemitraan%20RM%20Nusantara%20Paket%20${TAB_DATA[activeTab].title}%20-%20${pkg.name}...`}
+                            href={`https://wa.me/62812147036900?text=Halo%20Sagawa%20Group,%20saya%20tertarik%20dengan%20info%20Kemitraan%20RM%20Nusantara%20Paket%20${TAB_DATA[activeTab].title}%20-%20${pkg.name}...`}
                             target="_blank"
                             className={`block w-full py-3.5 px-4 text-center rounded-xl font-bold hover:text-white transition-all overflow-hidden border-2 ${
                               pIdx === TAB_DATA[activeTab].packages.length - 1

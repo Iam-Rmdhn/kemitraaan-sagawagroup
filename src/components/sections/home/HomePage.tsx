@@ -41,7 +41,7 @@ const actionVariants: Variants = {
 };
 
 export function HeroSection() {
-  const waNumber = "6281808985548";
+  const waNumber = "6281214703690";
   const defaultMessage = "Halo Tim Sagawa Group! 👋\n\nSaya tertarik untuk bergabung dengan Kemitraan Sagawa Group. Boleh minta informasi lebih detail mengenai prosedur dan paket yang tersedia?\n\nTerima kasih.";
   const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(defaultMessage)}`;
 

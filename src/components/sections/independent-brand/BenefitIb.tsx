@@ -94,7 +94,7 @@ export function BenefitIb() {
                 </div>
 
                 <FluidLink 
-                  href={`https://wa.me/628123456789?text=${encodeURIComponent(waMessage)}`}
+                  href={`https://wa.me/6281214703690?text=${encodeURIComponent(waMessage)}`}
                   target="_blank"
                   className="w-full group/btn flex items-center justify-center py-4 px-6 rounded-2xl font-bold text-white transition-all shadow-lg hover:shadow-xl active:scale-[0.98] text-lg"
                   style={{ backgroundColor: brandColor }}

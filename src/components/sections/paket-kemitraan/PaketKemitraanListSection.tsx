@@ -198,7 +198,7 @@ export function PaketKemitraanListSection() {
               </FluidLink>
 
               <FluidLink 
-                href={`https://wa.me/628123456789?text=${encodeURIComponent(
+                href={`https://wa.me/6281214703690?text=${encodeURIComponent(
                   `Halo Tim Kemitraan Sagawa Group! 👋\n\nSaya sangat tertarik dengan peluang bisnis kemitraan *${pkg.name}*.\n\nMohon informasi lebih lanjut terkait:\n1. Skema kemitraan & proyeksi ROI\n2. Ketersediaan lokasi di wilayah saya\n3. Tahapan awal bergabung memanfaatkan penawaran spesial saat ini\n\nTerima kasih.`
                 )}`}
                 target="_blank"

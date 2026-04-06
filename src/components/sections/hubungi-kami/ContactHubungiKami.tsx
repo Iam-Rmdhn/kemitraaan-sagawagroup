@@ -34,7 +34,7 @@ export function ContactHubungiKami() {
     {
       icon: <Phone className="w-6 h-6 text-slate-700" strokeWidth={1.5} />,
       title: "Telepon",
-      details: "+62 818-0898-5548",
+      details: "+62 812-1470-3690",
     },
     {
       icon: <Mail className="w-6 h-6 text-slate-700" strokeWidth={1.5} />,
@@ -61,7 +61,7 @@ export function ContactHubungiKami() {
     "Independent Brand",
   ];
 
-  const waNumber = "6281808985548";
+  const waNumber = "6281214703690";
   const sanitizeInput = (str: string) => {
     if (!str) return "";
     return str.replace(/[<>]/g, "");  

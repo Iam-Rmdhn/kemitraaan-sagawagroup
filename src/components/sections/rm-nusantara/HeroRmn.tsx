@@ -93,7 +93,7 @@ export function HeroRmn() {
                 </div>
 
                 <a 
-                  href="https://wa.me/6281234567890?text=Halo%20Sagawa%20Group,%20saya%20tertarik%20dengan%20info%20Kemitraan%20RM%20Nusantara%20beserta%20promonya..."
+                  href="https://wa.me/62812147036900?text=Halo%20Sagawa%20Group,%20saya%20tertarik%20dengan%20info%20Kemitraan%20RM%20Nusantara%20beserta%20promonya..."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 sm:px-10 py-4 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:bg-slate-800 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] overflow-hidden"

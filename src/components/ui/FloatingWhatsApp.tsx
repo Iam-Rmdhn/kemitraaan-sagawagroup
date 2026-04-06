@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const texts = ["Hubungi Kami!", "Konsultasi Gratis!"];
 
 export function FloatingWhatsApp() {
-  const waNumber = "6281808985548";
+  const waNumber = "6281214703690";
   const defaultMessage = "Halo Tim Sagawa Group! 👋\n\nSaya tertarik dan ingin mengetahui informasi lebih lanjut mengenai peluang Kemitraan bisnisnya. Boleh minta detailnya?\n\nTerima kasih.";
   const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
