@@ -4,6 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import { motion, Variants } from "motion/react";
 import { FluidLink } from "@/components/ui/FluidLink";
+import { trackEvent, trackCustomEvent } from "@/lib/meta-pixel";
 
 export function PaketKemitraanListSection() {
   const packages = [
@@ -205,6 +206,10 @@ export function PaketKemitraanListSection() {
                 className="group/btn-join flex-[1.2] flex items-center justify-center py-3.5 px-4 rounded-xl font-bold text-white transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] active:scale-[0.98]"
                 style={{ backgroundColor: pkg.color }}
                 fluidColor="rgba(0, 0, 0, 0.15)"
+                onClick={() => {
+                  trackEvent("Contact", { content_name: pkg.name });
+                  trackCustomEvent("WhatsAppClick", { source: "paket_list", package: pkg.name });
+                }}
               >
                 <span className="relative z-10 flex items-center">
                   Bergabung

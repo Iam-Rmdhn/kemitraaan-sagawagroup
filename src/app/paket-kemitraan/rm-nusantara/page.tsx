@@ -20,10 +20,10 @@ export default function RmNusantaraPage() {
     <div className="min-h-screen bg-slate-50">
       <HeroRmn />
       <AboutRmn />
+      <ProblemSolutionRmn />
       <WhyChooseUsRmn />
       <MenuRmn />
       <TimelineSection />
-      <ProblemSolutionRmn />
       <PricingTabsRmn />
       <RoiSectionRmn />
       <GalleryRmn />

@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, ArrowLeft } from "lucide-react";
+import { trackEvent, trackCustomEvent } from "@/lib/meta-pixel";
 
 export function HeroRmn() {
   const brandColor = "var(--rmn-color)";
@@ -97,6 +98,10 @@ export function HeroRmn() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative flex items-center justify-center gap-2 bg-slate-900 text-white px-8 sm:px-10 py-4 sm:py-4 rounded-2xl font-bold text-base sm:text-lg hover:bg-slate-800 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] overflow-hidden"
+                  onClick={() => {
+                    trackEvent("Contact", { content_name: "RM Nusantara Hero" });
+                    trackCustomEvent("WhatsAppClick", { source: "rmn_hero" });
+                  }}
                 >
                   <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block" />
                   Klaim Promo Sekarang

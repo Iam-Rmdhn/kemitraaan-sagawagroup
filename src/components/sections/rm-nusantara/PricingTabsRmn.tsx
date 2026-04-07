@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle2, Gift, AlertCircle, Clock, Star } from 'lucide-react';
 import { FluidLink } from '@/components/ui/FluidLink';
+import { trackEvent, trackCustomEvent } from '@/lib/meta-pixel';
 
 const TAB_DATA = [
   {
@@ -396,6 +397,10 @@ export default function PricingTabsRmn() {
                               borderColor: pIdx === TAB_DATA[activeTab].packages.length - 1 ? "transparent" : TAB_DATA[activeTab].themeColor
                             }}
                             fluidColor={TAB_DATA[activeTab].hoverColor}
+                            onClick={() => {
+                              trackEvent("Contact", { content_name: `RM Nusantara - ${TAB_DATA[activeTab].title} - ${pkg.name}` });
+                              trackCustomEvent("WhatsAppClick", { source: "rmn_pricing", package: `${TAB_DATA[activeTab].title} - ${pkg.name}` });
+                            }}
                           >
                             <span className="relative z-10 pointer-events-none drop-shadow-sm">Pilih Paket</span>
                           </FluidLink>

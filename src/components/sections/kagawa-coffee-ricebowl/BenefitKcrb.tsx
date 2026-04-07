@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Check, ArrowRight } from "lucide-react";
 import { FluidLink } from "@/components/ui/FluidLink";
+import { trackEvent, trackCustomEvent } from "@/lib/meta-pixel";
 
 export function BenefitKcrb() {
   const brandColor = "var(--kagawacoffeebowl-color)";
@@ -111,6 +112,10 @@ export function BenefitKcrb() {
                   className="w-full group/btn flex items-center justify-center py-4 px-6 rounded-2xl font-bold text-white transition-all shadow-lg hover:shadow-xl active:scale-[0.98] text-lg"
                   style={{ backgroundColor: secondColor }}
                   fluidColor="rgba(0, 0, 0, 0.15)"
+                  onClick={() => {
+                    trackEvent("Contact", { content_name: "Kagawa Coffee & Rice Bowl Conner" });
+                    trackCustomEvent("WhatsAppClick", { source: "kcrb_benefit" });
+                  }}
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Mulai Kolaborasi

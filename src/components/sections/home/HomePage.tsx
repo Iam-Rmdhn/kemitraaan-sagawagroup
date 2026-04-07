@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "motion/react";
 import { FluidLink } from "@/components/ui/FluidLink";
+import { trackEvent, trackCustomEvent } from "@/lib/meta-pixel";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -80,6 +81,10 @@ export function HeroSection() {
             target="_blank"
             className="group/btn-primary inline-flex items-center justify-center bg-red-600 text-white px-8 py-3 rounded-full font-medium transition-shadow active:scale-[0.98] cursor-pointer"
             fluidColor="#b91c1c"
+            onClick={() => {
+              trackEvent("Contact", { content_name: "Hero CTA" });
+              trackCustomEvent("WhatsAppClick", { source: "home_hero" });
+            }}
           >
             <span className="relative z-10 font-semibold tracking-wide">
               Gabung Sekarang

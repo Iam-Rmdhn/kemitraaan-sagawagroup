@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -98,7 +99,7 @@ export default function RootLayout({
     description: "Sagawa Group menawarkan peluang bisnis kemitraan F&B terpercaya. Bergabunglah dengan berbagai brand kuliner sukses seperti Kagawa Rice Bowl, Kagawa Coffee Corner, dan RM Nusantara.",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+62-818-0898-5548",
+      telephone: "+62-812-1470-3690",
       contactType: "sales",
       areaServed: "ID",
       availableLanguage: "Indonesian"
@@ -112,11 +113,39 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=26740713475517789&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </head>
       <body
         className={`${albertSans.variable} antialiased`}
         suppressHydrationWarning
       >
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '26740713475517789');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
         <ScrollProgress />
         <Navbar />
         {children}
