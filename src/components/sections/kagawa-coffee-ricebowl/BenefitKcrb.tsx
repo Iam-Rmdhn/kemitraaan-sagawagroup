@@ -10,16 +10,13 @@ export function BenefitKcrb() {
   const secondColor = "var(--secondary-kagawacoffeebowl-color)";
 
   const features = [
-    "Lisensi Brand Kagawa",
-    "Booth & Peralatan Lengkap Premium",
-    "Seragam Karyawan",
-    "Bantuan Pencarian Karyawan",
-    "Sistem Kasir (POS)",
-    "Bahan Baku Awal Grade A",
-    "Marketing & Promosi VIP",
-    "Bimbingan Operasional Ekstra",
-    "Menu Spesial Eksekutif",
-    "Buku SOP Standar Jepang",
+      "Potensi revenue lebih optimal",
+      "Bahan Baku & Peralatan Lengkap", 
+      "Dibantu Mencari Tim Profesional", 
+      "SOP & Training Multi-Skill",
+      "Media Promosi Terintegrasi",
+      "Dukungan Penuh dari Pusat",
+      "Akses ke semua jaringan supplier",
   ];
 
   const priceOriginal = 199000000;

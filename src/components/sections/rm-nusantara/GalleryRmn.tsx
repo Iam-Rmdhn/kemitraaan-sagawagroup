@@ -24,6 +24,10 @@ const galleryImages = [
     src: '/assets/img/doc/RM/5.webp',
     className: 'md:col-span-1 md:row-span-1 h-[200px] md:h-[250px]',
   },
+  {
+    src: '/assets/img/doc/RM/1.webp',
+    className: 'md:col-span-1 md:row-span-1 h-[200px] md:h-[250px]',
+  },
 ];
 
 export function GalleryRmn() {

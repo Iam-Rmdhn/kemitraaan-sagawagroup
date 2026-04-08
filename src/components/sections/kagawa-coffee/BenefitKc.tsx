@@ -15,7 +15,6 @@ export function BenefitKc() {
     "Media Promosi & Digital Marketing",
     "Dukungan Operasional dari Pusat",
     "Akses ke jaringan supplier resmi Kagawa Coffee",
-    "Monitoring omset dashboard dan POS sistem"
   ];
 
   const originalPrice = 169000000;

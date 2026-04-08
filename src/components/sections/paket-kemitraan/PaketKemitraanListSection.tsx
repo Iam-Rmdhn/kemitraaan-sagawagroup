@@ -14,8 +14,8 @@ export function PaketKemitraanListSection() {
       name: "Kagawa Rice Bowl",
       color: "var(--kagawaricebowl-color)",
       image: "/assets/img/gerai/kagawa-ricebowl.webp",
-      originalPrice: 89000000,
-      discountPrice: 69000000,
+      originalPrice: 99000000,
+      discountPrice: 79000000,
       features: [
         "Bahan Baku & Peralatan Premium", 
         "Dibantu Mencari Karyawan Berkualitas", 
@@ -23,7 +23,7 @@ export function PaketKemitraanListSection() {
         "Media Promosi Digital & Konvensional",
         "Dukungan 24/7 dari Pusat",
         "Akses ke jaringan supplier resmi Kagawa Rice Bowl",
-        "Monitoring omset dashboard dan POS sistem"
+        "Cocok untuk entry-level high traffic area "
       ]
     },
     {
@@ -41,7 +41,6 @@ export function PaketKemitraanListSection() {
         "Media Promosi & Digital Marketing",
         "Dukungan Operasional dari Pusat",
         "Akses ke jaringan supplier resmi Kagawa Coffee",
-        "Monitoring omset dashboard dan POS sistem"
       ]
     },
     {
@@ -53,13 +52,13 @@ export function PaketKemitraanListSection() {
       originalPrice: 199000000,
       discountPrice: 169000000,
       features: [
+        "Potensi revenue lebih optimal",
         "Bahan Baku & Peralatan Lengkap", 
         "Dibantu Mencari Tim Profesional", 
         "SOP & Training Multi-Skill",
         "Media Promosi Terintegrasi",
         "Dukungan Penuh dari Pusat",
         "Akses ke semua jaringan supplier",
-        "Monitoring omset dashboard dan POS sistem"
       ]
     },
     {
@@ -71,13 +70,13 @@ export function PaketKemitraanListSection() {
       originalPrice: 199000000,
       discountPrice: 139000000,
       features: [
-        "Bahan Baku & Peralatan Tradisional", 
+        "Setup operasional lengkap",
+        "Peralatan dan bahan baku fully suported", 
         "Dibantu Mencari Karyawan Berpengalaman", 
-        "SOP & Training Masakan Nusantara",
+        "Siap langsung berjalan (ready to operate)",
         "Media Promosi Lokal & Digital",
         "Dukungan Operasional Harian",
-        "Akses ke jaringan supplier tradisional",
-        "Monitoring omset dashboard dan POS sistem"
+        "Sistem operasional terintegrasi"
       ]
     },
     {
@@ -87,7 +86,7 @@ export function PaketKemitraanListSection() {
       color: "var(--independent-color)",
       image: "/assets/img/gerai/indepandent.webp",
       originalPrice: 119000000,
-      discountPrice: 79000000,
+      discountPrice: 99000000,
       features: [
         "Konsultasi Bisnis Mendalam", 
         "Dibantu Mencari Lokasi Strategis", 

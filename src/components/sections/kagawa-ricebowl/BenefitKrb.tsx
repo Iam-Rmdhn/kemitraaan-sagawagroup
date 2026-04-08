@@ -9,17 +9,17 @@ export function BenefitKrb() {
   const brandColor = "var(--kagawaricebowl-color)";
 
   const features = [
-    "Bahan Baku & Peralatan Premium", 
-    "Dibantu Mencari Karyawan Berkualitas", 
-    "SOP & Training Komprehensif",
-    "Media Promosi Digital & Konvensional",
-    "Dukungan 24/7 dari Pusat",
-    "Akses ke jaringan supplier resmi Kagawa Rice Bowl",
-    "Monitoring omset dashboard dan POS sistem"
+      "Bahan Baku & Peralatan Premium", 
+      "Dibantu Mencari Karyawan Berkualitas", 
+      "SOP & Training Komprehensif",
+      "Media Promosi Digital & Konvensional",
+      "Dukungan 24/7 dari Pusat",
+      "Akses ke jaringan supplier resmi Kagawa Rice Bowl",
+      "Cocok untuk entry-level high traffic area "
   ];
 
-  const originalPrice = 89000000;
-  const discountPrice = 69000000;
+  const originalPrice = 99000000;
+  const discountPrice = 79000000;
 
   const waMessage = `Halo Tim Kemitraan Sagawa Group! 👋\n\nSaya sangat tertarik dengan peluang bisnis kemitraan *Kagawa Rice Bowl*.\n\nMohon informasi lebih lanjut terkait:\n1. Skema kemitraan & proyeksi ROI\n2. Ketersediaan lokasi di wilayah saya\n3. Tahapan awal bergabung memanfaatkan penawaran spesial saat ini\n\nTerima kasih.`;
 
