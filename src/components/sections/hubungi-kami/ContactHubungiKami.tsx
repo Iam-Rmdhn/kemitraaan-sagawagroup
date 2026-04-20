@@ -45,7 +45,7 @@ export function ContactHubungiKami() {
     {
       icon: <MapPin className="w-6 h-6 text-slate-700" strokeWidth={1.5} />,
       title: "Alamat",
-      details: "Jl. Sawo No. 156, RT: 04/01 Cipedak-Jagakarsa, Jakarta Selatan.",
+      details: "Jl. H Misan V No. 11-B/6-A, Kukusan-Beji, Depok 16425",
     },
     {
       icon: <Clock className="w-6 h-6 text-slate-700" strokeWidth={1.5} />,

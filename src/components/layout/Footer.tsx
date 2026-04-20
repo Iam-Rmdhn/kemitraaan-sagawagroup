@@ -59,7 +59,7 @@ export function Footer() {
               <ul className="space-y-4 pt-2">
                 <li className="flex items-start text-sm text-slate-400">
                   <MapPin className="w-5 h-5 text-red-500 mr-3 shrink-0 mt-0.5" />
-                  <span>Jl. Sawo No. 156, RT: 04/01 Cipedak-Jagakarsa, Jakarta Selatan.</span>
+                  <span>Jl. H Misan V No. 11-B/6-A, Kukusan-Beji, Depok 16425</span>
                 </li>
                 <li className="flex items-center text-sm text-slate-400 hover:text-red-500 transition-colors">
                   <Phone className="w-5 h-5 text-red-500 mr-3 shrink-0" />
@@ -104,8 +104,9 @@ export function Footer() {
 
             <div className="md:col-span-2 lg:col-span-3 space-y-6">
               <h3 className="text-white font-bold text-lg mb-6 tracking-wide">Lokasi Kami</h3>
-              <div className="w-[250px] h-[250px] rounded-2xl overflow-hidden border border-slate-700 bg-slate-800 relative group">              <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3965.3627264051825!2d106.7975550750388!3d-6.347054993642766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjAnNDkuNCJTIDEwNsKwNDgnMDAuNSJF!5e0!3m2!1sid!2sid!4v1772729695233!5m2!1sid!2sid" 
+              <div className="w-[250px] h-[250px] rounded-2xl overflow-hidden border border-slate-700 bg-slate-800 relative group">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.252203261004!2d106.81291517499146!3d-6.361395793628639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eea02fda97fb%3A0x78a85036778ba600!2sJl.%20H.%20Misan%20V%20No.11%2C%20Kukusan%2C%20Kecamatan%20Beji%2C%20Kota%20Depok%2C%20Jawa%20Barat%2016425!5e0!3m2!1sid!2sid!4v1776668633986!5m2!1sid!2sid" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
