@@ -1,64 +1,48 @@
 "use client";
 
 import React from "react";
-import { 
-  MessagesSquare, 
-  FileSignature, 
-  MapPin, 
-  Hammer, 
-  Users, 
-  Truck, 
-  Store 
+import {
+  MessagesSquare,
+  MapPin,
+  Hammer,
+  Users,
+  Store
 } from "lucide-react";
 import { motion } from "motion/react";
 
 const timelineSteps = [
   {
     id: 1,
-    title: "Konsultasi, Presentasi & test food",
-    description: "Pertemuan awal untuk mendiskusikan konsep, presentasi bisnis, dan mencoba sampel makanan.",
+    title: "Konsultasi & Registrasi",
+    description: "Diskusi konsep bisnis, presentasi kemitraan, test food, hingga penandatanganan kesepakatan dan pembayaran DP.",
     icon: <MessagesSquare className="w-6 h-6 text-white" />,
     color: "bg-red-600"
   },
   {
     id: 2,
-    title: "Registrasi & Dp 10jt",
-    description: "Penandatanganan kesepakatan awal dan pembayaran down payment (DP) untuk mengamankan kemitraan.",
-    icon: <FileSignature className="w-6 h-6 text-white" />,
-    color: "bg-red-600"
-  },
-  {
-    id: 3,
     title: "Pencarian Lokasi",
-    description: "Proses survei dan pemilihan lokasi strategis yang paling sesuai untuk outlet baru Anda.",
+    description: "Survei dan seleksi lokasi strategis yang sesuai dengan target pasar dan standar outlet.",
     icon: <MapPin className="w-6 h-6 text-white" />,
     color: "bg-red-600"
   },
   {
-    id: 4,
-    title: "Renovasi",
-    description: "Proses pembangunan dan penyesuaian desain interior maupun eksterior outlet sesuai standar.",
+    id: 3,
+    title: "Renovasi & Persiapan Outlet",
+    description: "Pembangunan, desain interior & eksterior outlet sesuai standar brand, termasuk instalasi equipment.",
     icon: <Hammer className="w-6 h-6 text-white" />,
     color: "bg-red-600"
   },
   {
-    id: 5,
-    title: "Recrutment SDM & training",
-    description: "Perekrutan karyawan dan pelatihan intensif untuk memastikan operasional berjalan sesuai SOP.",
+    id: 4,
+    title: "Rekrutmen SDM & Supply Chain",
+    description: "Perekrutan karyawan, pelatihan SOP intensif, serta pengiriman bahan baku dan perlengkapan operasional.",
     icon: <Users className="w-6 h-6 text-white" />,
     color: "bg-red-600"
   },
   {
-    id: 6,
-    title: "Pengirimman Bahan baku & Equipment",
-    description: "Distribusi perlengkapan, peralatan, dan bahan baku awal ke outlet yang sudah siap.",
-    icon: <Truck className="w-6 h-6 text-white" />,
-    color: "bg-red-600"
-  },
-  {
-    id: 7,
-    title: "Soft opening & Grand opening",
-    description: "Fase percobaan operasional dan peresmian outlet secara penuh untuk masyarakat umum.",
+    id: 5,
+    title: "Soft Opening & Grand Opening",
+    description: "Uji coba operasional outlet, evaluasi kesiapan tim, dan peresmian outlet untuk publik.",
     icon: <Store className="w-6 h-6 text-white" />,
     color: "bg-red-600"
   }
@@ -118,7 +102,7 @@ export function TimelineSection() {
                   <div className={`hidden md:block w-5/12 ${isEven ? 'text-right pr-12' : 'opacity-0'}`}>
                     {isEven && (
                       <div className="hover:transform hover:-translate-x-2 transition-all duration-300 bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg border border-slate-100">
-                        <span className="text-red-600 font-bold text-sm tracking-widest uppercase mb-1 block">Langkah 0{step.id}</span>
+                        <span className="text-red-600 font-bold text-sm tracking-widest uppercase mb-1 block">Fase 0{step.id}</span>
                         <h3 className="text-xl font-bold text-slate-800 mb-2">{step.title}</h3>
                         <p className="text-slate-600 leading-relaxed">{step.description}</p>
                       </div>
@@ -134,7 +118,7 @@ export function TimelineSection() {
                   <div className={`hidden md:block w-5/12 ${!isEven ? 'text-left pl-12' : 'opacity-0'}`}>
                     {!isEven && (
                       <div className="hover:transform hover:translate-x-2 transition-all duration-300 bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg border border-slate-100">
-                        <span className="text-red-600 font-bold text-sm tracking-widest uppercase mb-1 block">Langkah 0{step.id}</span>
+                        <span className="text-red-600 font-bold text-sm tracking-widest uppercase mb-1 block">Fase 0{step.id}</span>
                         <h3 className="text-xl font-bold text-slate-800 mb-2">{step.title}</h3>
                         <p className="text-slate-600 leading-relaxed">{step.description}</p>
                       </div>
@@ -143,7 +127,7 @@ export function TimelineSection() {
 
                   <div className="md:hidden w-full pl-20 pr-4 pt-1">
                     <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                      <span className="text-red-600 font-bold text-sm tracking-widest uppercase mb-1 block">Langkah 0{step.id}</span>
+                      <span className="text-red-600 font-bold text-sm tracking-widest uppercase mb-1 block">Fase 0{step.id}</span>
                       <h3 className="text-xl font-bold text-slate-800 mb-2">{step.title}</h3>
                       <p className="text-slate-600 leading-relaxed text-sm md:text-base">{step.description}</p>
                     </div>

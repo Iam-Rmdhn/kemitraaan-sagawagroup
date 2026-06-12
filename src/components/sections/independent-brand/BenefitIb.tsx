@@ -1,121 +1,214 @@
 "use client";
 
-import { motion } from "motion/react";
-import { Check, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { CheckCircle2, AlertCircle, Star } from "lucide-react";
 import { FluidLink } from "@/components/ui/FluidLink";
 import { trackEvent, trackCustomEvent } from "@/lib/meta-pixel";
 
+const TAB_DATA = [
+  {
+    id: "license-package",
+    title: "License Package",
+    price: "99",
+    originalPrice: "99.000.000",
+    description:
+      "Ditujukan bagi mitra yang telah memiliki brand dan operasional sendiri dengan kebutuhan utama pada akses supply chain dan sistem dari Sagawa.",
+    benefits: [
+      "Akses supply chain Sagawa",
+      "Dukungan sistem operasional",
+      "Fleksibilitas pengelolaan brand",
+      "Konsultasi bisnis mendalam",
+      "Lisensi seumur hidup",
+    ],
+  },
+  {
+    id: "independent-franchise-package",
+    title: "Independent Franchise Package",
+    price: "389",
+    originalPrice: "389.000.000",
+    description:
+      "Solusi menyeluruh bagi mitra yang ingin membangun brand secara lebih terstruktur dengan dukungan penuh dari Sagawa.",
+    benefits: [
+      "Sistem operasional terintegrasi",
+      "Akses supply chain Sagawa",
+      "Pendampingan bisnis",
+      "Potensi mengembangkan franchise sendiri",
+      "Dibantu mencari lokasi strategis",
+      "SOP & Training sesuai kebutuhan",
+    ],
+  },
+] as const;
+
 export function BenefitIb() {
   const brandColor = "var(--independent-color)";
+  const [activeTab, setActiveTab] = useState(0);
 
-  const features = [
-    "Konsultasi Bisnis Mendalam", 
-    "Dibantu Mencari Lokasi Strategis", 
-    "Sistem Operasional Outlet Custom",
-    "SOP & Training Sesuai Kebutuhan",
-    "Lisensi Seumur Hidup"
-  ];
+  const activePricing = TAB_DATA[activeTab];
 
-  const originalPrice = 119000000;
-  const discountPrice = 99000000;
-
-  const waMessage = `Halo Tim Kemitraan Sagawa Group! 👋\n\nSaya sangat tertarik dengan peluang bisnis kemitraan *Independent Brand*.\n\nMohon informasi lebih lanjut terkait:\n1. Skema kemitraan & proyeksi ROI\n2. Ketersediaan lokasi di wilayah saya\n3. Tahapan awal bergabung memanfaatkan penawaran spesial saat ini\n\nTerima kasih.`;
+  const waMessage = `Halo Tim Kemitraan Sagawa Group! 👋\n\nSaya sangat tertarik dengan peluang bisnis kemitraan *Independent Brand* - *${activePricing.title}*.\n\nMohon informasi lebih lanjut terkait:\n1. Skema kemitraan & proyeksi ROI\n2. Ketersediaan lokasi di wilayah saya\n3. Tahapan awal bergabung untuk paket ${activePricing.title}\n\nTerima kasih.`;
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center"
+    <section className="relative py-16 sm:py-24 overflow-hidden" id="packages">
+      <div
+        className="absolute inset-0 z-0"
+        style={{ backgroundColor: brandColor }}
+      />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] bg-white opacity-[0.05] rounded-full blur-[100px] z-0 pointer-events-none"
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 drop-shadow-sm tracking-tight text-balance">
-              Investasi & <span style={{ color: brandColor }}>Benefit</span>
+            <span
+              className="inline-block py-1.5 px-4 rounded-full bg-white/10 text-white text-xs md:text-sm font-bold tracking-widest uppercase mb-4 shadow-[0_4px_12px_rgba(0,0,0,0.1)] backdrop-blur-md border border-white/20"
+            >
+              Pilihan Kemitraan
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight mb-4 drop-shadow-lg">
+              Investasi &
+              <span className="text-white/90">Benefit</span>
             </h2>
-            <p className="text-lg text-slate-600 mb-10 max-w-2xl text-balance">
+            <p className="text-lg text-white/80 font-medium text-balance">
               Dapatkan fasilitas terlengkap dan dukungan penuh dari kami untuk memastikan bisnis kuliner unik Anda beroperasi optimal dan sukses di pasaran.
             </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-6">
-              {features.map((feature, i) => (
-                <motion.div 
-                  key={i} 
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="flex items-start group"
-                >
-                  <div 
-                    className="w-6 h-6 rounded-full flex items-center justify-center mr-4 shrink-0 mt-0.5 transition-colors duration-300"
-                    style={{ backgroundColor: `${brandColor}15`, color: brandColor }}
-                  >
-                    <Check className="w-3.5 h-3.5 font-bold" strokeWidth={3} />
-                  </div>
-                  <span className="text-sm md:text-base text-slate-700 font-medium leading-snug group-hover:text-slate-900 transition-colors">
-                    {feature}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95, y: 30 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2, type: "spring", bounce: 0.3 }}
-            className="lg:col-span-5 xl:col-span-4"
-          >
-            <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-8 md:p-10 shadow-xl relative overflow-hidden group">
-              <div className="relative z-10 text-center flex flex-col items-center">
-                <span className="inline-block py-1.5 px-4 rounded-full bg-white text-xs font-bold tracking-widest uppercase mb-8 shadow-sm border border-slate-100" style={{ color: brandColor }}>
-                  Penawaran Spesial
-                </span>
-                
-                <div className="mb-2">
-                  <p className="text-slate-400 font-medium mb-1">Harga Normal</p>
-                  <p className="text-lg md:text-xl font-medium text-slate-400 line-through decoration-slate-400 opacity-80">
-                    {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(originalPrice)}
-                  </p>
-                </div>
-
-                <div className="mb-10">
-                  <p className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Harga Setelah Promo</p>
-                  <p 
-                    className="text-4xl md:text-5xl font-black drop-shadow-sm" 
-                    style={{ color: brandColor }}
-                  >
-                    {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(discountPrice)}
-                  </p>
-                </div>
-
-                <FluidLink 
-                  href={`https://wa.me/6281214703690?text=${encodeURIComponent(waMessage)}`}
-                  target="_blank"
-                  className="w-full group/btn flex items-center justify-center py-4 px-6 rounded-2xl font-bold text-white transition-all shadow-lg hover:shadow-xl active:scale-[0.98] text-lg"
-                  style={{ backgroundColor: brandColor }}
-                  fluidColor="rgba(0, 0, 0, 0.15)"
-                  onClick={() => {
-                    trackEvent("Contact", { content_name: "Independent Brand" });
-                    trackCustomEvent("WhatsAppClick", { source: "ib_benefit" });
-                  }}
-                >
-                  <span className="relative z-10 flex items-center">
-                    Ambil Kesempatan Ini
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1.5 transition-transform duration-300" />
-                  </span>
-                </FluidLink>
-                
-                <p className="text-xs text-slate-400 mt-5 font-medium">Dapatkan Keuntungan Maksimal dengan Dukungan Penuh dari Kami</p>
-              </div>
-            </div>
           </motion.div>
         </div>
+
+        {/* Tabs */}
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-nowrap overflow-x-auto justify-start md:justify-center scrollbar-hide border-b border-white/20 mb-8 sm:mb-12 relative pb-1 hide-scrollbar">
+            {TAB_DATA.map((tab, idx) => {
+              const isActive = activeTab === idx;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setActiveTab(idx)}
+                  className={`
+                    relative px-6 py-4 flex items-center justify-center gap-2.5
+                    text-sm sm:text-base font-bold whitespace-nowrap transition-all duration-300 ease-in-out
+                    ${isActive ? "text-white" : "text-white/60 hover:text-white/90 hover:bg-white/5"}
+                  `}
+                >
+                  {tab.title}
+                  {isActive && (
+                    <motion.div
+                      layoutId="ibActiveTabUnderline"
+                      className="absolute -bottom-px left-0 right-0 h-[3px] rounded-t-full bg-white"
+                      initial={false}
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Tab Content */}
+          <div className="relative min-h-[500px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activePricing.id}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="w-full"
+              >
+                <div className="max-w-lg mx-auto">
+                  {/* Single Pricing Card */}
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col group border border-white/10 relative">
+                    {activeTab === 1 && (
+                      <div className="absolute top-0 right-0 z-10 overflow-hidden w-[100px] h-[100px] pointer-events-none">
+                        <div className="absolute top-[22px] -right-[32px] w-[140px] rotate-50 bg-yellow-400 text-yellow-950 text-[9px] font-black py-1 shadow-md flex items-center justify-center gap-1 tracking-wider border-y border-yellow-300">
+                          <Star className="w-2.5 h-2.5 fill-yellow-950 text-yellow-950" />
+                          REKOMENDASI
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Package Header */}
+                    <div className="p-6 sm:p-8 bg-slate-50 relative overflow-hidden border-b border-slate-100">
+                      <h4 className="text-xl font-black text-slate-800 mb-2 uppercase relative z-10">{activePricing.title}</h4>
+
+                      {/* Pricing */}
+                      <div className="flex flex-col gap-1 mb-4 relative z-10">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-semibold text-slate-400 line-through decoration-slate-400 decoration-2 opacity-0">
+                            Rp {activePricing.originalPrice}
+                          </span>
+                          <span className="px-2 py-0.5 rounded text-[10px] bg-red-500 font-bold text-white border border-slate-900/10 shadow-sm">
+                            PACKAGE
+                          </span>
+                        </div>
+                        <div className="flex items-baseline gap-1" style={{ color: brandColor }}>
+                          <span className="text-xl font-bold">Rp</span>
+                          <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">{activePricing.price}</span>
+                          <span className="text-xl font-bold">.000.000</span>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-sm text-slate-600 leading-relaxed font-medium relative z-10">
+                        {activePricing.description}
+                      </p>
+                    </div>
+
+                    {/* Benefits List */}
+                    <div className="p-6 sm:p-8 grow flex flex-col relative bg-white">
+                      <h5 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <AlertCircle className="w-3.5 h-3.5" />
+                        Termasuk dalam paket
+                      </h5>
+                      <ul className="space-y-4 mb-8 grow relative z-10">
+                        {activePricing.benefits.map((benefit, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-3">
+                            <div className="mt-0.5 shrink-0">
+                              <CheckCircle2 className="w-5 h-5" style={{ color: brandColor }} />
+                            </div>
+                            <span className="text-sm text-slate-700 font-medium leading-tight">
+                              {benefit}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Single CTA */}
+                      <div className="mt-auto pt-2 relative z-10">
+                        <FluidLink
+                          href={`https://wa.me/6281214703690?text=${encodeURIComponent(waMessage)}`}
+                          target="_blank"
+                          className="block w-full py-3.5 px-4 text-center rounded-xl font-bold text-white transition-all overflow-hidden border-2 shadow-md hover:shadow-lg"
+                          style={{
+                            backgroundColor: brandColor,
+                            borderColor: "transparent",
+                          }}
+                          fluidColor="rgba(0, 0, 0, 0.15)"
+                          onClick={() => {
+                            trackEvent("Contact", { content_name: `Independent Brand - ${activePricing.title}` });
+                            trackCustomEvent("WhatsAppClick", { source: "ib_benefit", package: activePricing.title });
+                          }}
+                        >
+                          <span className="relative z-10 pointer-events-none drop-shadow-sm">Pilih Paket</span>
+                        </FluidLink>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+
       </div>
     </section>
   );

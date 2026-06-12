@@ -32,8 +32,8 @@ export function PaketKemitraanListSection() {
       name: "Kagawa Coffee Conner",
       color: "var(--kagawacoffee-color)",
       image: "/assets/img/gerai/kagawa-coffee-conner.webp",
-      originalPrice: 169000000,
-      discountPrice: 139000000,
+      originalPrice: 119000000,
+      discountPrice: 189000000,
       features: [
         "Bahan Baku & Peralatan Coffee Grade A", 
         "Dibantu Mencari Karyawan Barista", 
@@ -49,8 +49,8 @@ export function PaketKemitraanListSection() {
       name: "Kagawa Coffee & Rice Bowl Conner",
       color: "var(--kagawacoffeebowl-color)",
       image: "/assets/img/gerai/coffee-ricebowl.webp",
-      originalPrice: 199000000,
-      discountPrice: 169000000,
+      originalPrice: 350000000,
+      discountPrice: 259000000,
       features: [
         "Potensi revenue lebih optimal",
         "Bahan Baku & Peralatan Lengkap", 

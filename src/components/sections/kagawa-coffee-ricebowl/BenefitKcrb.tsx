@@ -19,8 +19,8 @@ export function BenefitKcrb() {
       "Akses ke semua jaringan supplier",
   ];
 
-  const priceOriginal = 199000000;
-  const priceDiscount = 169000000;
+  const priceOriginal = 350000000;
+  const priceDiscount = 259000000;
 
   const wamessage = encodeURIComponent(
     "Hai Sagawa Group, Saya tertarik dengan Program Kemitraan Kagawa Coffee & Rice Bowl Conner."
@@ -45,7 +45,7 @@ export function BenefitKcrb() {
               Investasi & <span style={{ color: secondColor }}>Benefit</span>
             </h2>
             <p className="text-lg text-slate-600 mb-10 max-w-2xl text-balance">
-              Bergabunglah bersama kami dan dapatkan semua fasilitas eksklusif untuk memulai dan menjalankan bisnis Kagawa Coffee & Rice Bowl Conner yang sukses.
+              menghadirkan solusi bisnis F&B yang lengkap dengan menggabungkan kekuatan coffee premium dan rice bowl dalam satu konsep terintegrasi. 
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-6">

@@ -14,27 +14,53 @@ const TAB_DATA = [
     hoverColor: 'var(--masgaw-color-hover)',
     packages: [
       {
-        name: 'Paket A',
-        price: '139',
-        originalPrice: '169.000.000',
-        description: 'Solusi kemitraan yang fleksibel bagi mitra yang telah memiliki/menyiapkan kebutuhan dasar operasional secara mandiri',
+        name: 'Paket Lisensi',
+        price: '89',
+        originalPrice: '109.000.000',
+        description: 'Solusi kemitraan yang dirancang bagi mitra yang ingin memulai usaha dengan investasi yang lebih efisien ',
         benefits: [
-          'Tidak termasuk renovasi outlet',
-          'Peralatan & furnitur disiapkan oleh mitra',
-          'Dukungan sistem operasional & supply chain',
-          'Cocok untuk lokasi existing/usaha berjalan'
+          'Hak penggunaan merk',
+          'Termasuk rekrutmen karyawan',
+          'Pelatihan S.O.P Karyawan',
+          'Bahan baku terbatas (Training only)',
+          'Tidak termasuk renovasi outlet'
         ]
       },
       {
-        name: 'Paket B',
-        price: '179',
-        originalPrice: '219.000.000',
-        description: 'Solusi kemitraan menyeluruh bagi mitra yang menginginkan kesiapan operasional yang lebih lengkap dan terstandarisasi.',
+        name: 'Paket 1',
+        price: '139',
+        originalPrice: '169.000.000',
+        description: 'Solusi kemitraan yang memberikan dukungan lebih komprehensif dalam aspek penyediaan peralatan dan pendampingan awal operasional',
         benefits: [
           'Termasuk renovasi outlet',
           'Penyediaan peralatan & furnitur lengkap',
           'Sistem operasional terintegrasi',
           'Dukungan penuh dari set up hingga operasional'
+        ]
+      },
+      {
+        name: 'Paket 2',
+        price: '179',
+        originalPrice: '219.000.000',
+        description: 'Solusi kemitraan bagi mitra yang menginginkan kesiapan usaha yang lebih matang dengan dukungan yang lebih intensif.',
+        benefits: [
+          'Termasuk rekrutmen karyawan dan pelatihan  S.O.P',
+          'Dukungan sistem operasional & supply chain',
+          'Equipment lebih lengkap',
+          'cocok untuk lokasi existing/usaha berjalan',
+          'Tidak termasuk renovasi outlet'
+        ]
+      },
+      {
+        name: 'Paket 3',
+        price: '249',
+        originalPrice: '299.000.000',
+        description: 'Solusi kemitraan menyeluruh dengan fasilitas paling lengkap yang dirancang untuk mitra yang menginginkan solusi usaha siap jalan',
+        benefits: [
+          'Termasuk rekrutmen karyawan dan pelatihan S.O.P',
+          'Penyediaan equipment lengkap',
+          'Dukungan penuh dari set up hingga operasional',
+          'Termasuk renovasi outlet maksimal 70-75 jt'
         ]
       }
     ]
@@ -46,15 +72,29 @@ const TAB_DATA = [
     hoverColor: 'var(--warnas-color-hover)',
     packages: [
       {
-        name: 'Paket 1',
+        name: 'Paket Lisensi',
         price: '69',
         originalPrice: '89.000.000',
-        description: 'Solusi awal bagi mitra yang ingin memulai bisnis dengan konsep sederhana dan fleksibel.',
+        description: 'Paket dengan nilai investasi paling terjangkau dan risiko minimal',
+        benefits: [
+          'Hak penggunaan merk',
+          'Termasuk rekrutmen karyawan',
+          'Pelatihan S.O.P Karyawan',
+          'Bahan baku terbatas (Training only)',
+          'Tidak termasuk renovasi outlet'
+        ]
+      },
+      {
+        name: 'Paket 1',
+        price: '79',
+        originalPrice: '99.000.000',
+        description: 'Solusi awal bagi mitra yang ingin memulai bisnis dengan konsep sederhana dan fleksibel',
         benefits: [
           'Konsep booth/gerobak',
-          'Peralatan & bahan baku dasar',
-          'Cocok untuk area dengan mobilitas tinggi',
-          'Operasional sederhana dan efisien'
+          'Termasuk rekrutmen karyawan dan pelatihan S.O.P',
+          'Dukungan sistem operasional dan supply chain',
+          'Termasuk peralatan (equipment skala medium)',
+          'Tidak termasuk renovasi outlet'
         ]
       },
       {
@@ -63,22 +103,23 @@ const TAB_DATA = [
         originalPrice: '145.000.000',
         description: 'Paket pengembangan bisnis dengan skala operasional yang lebih stabil dan terstruktur.',
         benefits: [
-          'Konsep kios/ruko (min 3x4)',
+          'Konsep kios/ruko (min 3x6)',
+          'Termasuk rekrutmen karyawan dan pelatihan S.O.P',
           'Peralatan lebih lengkap',
-          'Dukungan bahan baku yang lebih komprehensif',
-          'Cocok untuk operasional harian yang lebih optimal'
+          'Dukungan sistem operasional dan supply chain',
+          'Tidak termasuk renovasi outlet'
         ]
       },
       {
         name: 'Paket 3',
-        price: '139',
-        originalPrice: '169.000.000',
+        price: '189',
+        originalPrice: '229.000.000',
         description: 'Solusi menyeluruh bagi mitra yang menginginkan kesiapan bisnis secara maksimal dengan dukungan penuh dari Sagawa.',
         benefits: [
-          'Setup operasional lengkap',
-          'Peralatan dan bahan baku fully supported',
-          'Sistem operasional terintegrasi',
-          'Siap langsung berjalan (ready to operate)'
+          'Termasuk rekrutmen karyawan dan  pelatihan S.O.P',
+          'PDukungan sistem operasional dan supply chain',
+          'Peralatan dan bahn baku fully supported',
+          'Termasuk renovasi outlet maksimal 70-75 jtr'
         ]
       }
     ]
@@ -90,27 +131,53 @@ const TAB_DATA = [
     hoverColor: 'var(--masakanmasgawa-color-hover)',
     packages: [
       {
-        name: 'Paket A',
-        price: '139',
-        originalPrice: '169.000.000',
-        description: 'Menghadirkan konsep seafood dengan fleksibilitas tinggi, memberikan ruang bagi investor untuk menyesuaikan fasilitas dan pengembangan usaha.',
+        name: 'Paket Lisensi',
+        price: '89',
+        originalPrice: '109.000.000',
+        description: 'Solusi kemitraan yang dirancang bagi mitra yang ingin memulai usaha dengan investasi yang lebih efisien ',
         benefits: [
-          'Tidak termasuk renovasi outlet',
-          'Peralatan & furnitur disiapkan oleh mitra',
-          'Dukungan sistem operasional & supply chain',
-          'Cocok untuk lokasi existing/usaha berjalan'
+          'Hak penggunaan merk',
+          'Termasuk rekrutmen karyawan',
+          'Pelatihan S.O.P Karyawan',
+          'Bahan baku terbatas (Training only)',
+          'Tidak termasuk renovasi outlet'
         ]
       },
       {
-        name: 'Paket B',
-        price: '179',
-        originalPrice: '219.000.000',
-        description: 'Menghadirkan konsep seafood dengan dukungan fasilitas yang lebih lengkap, dirancang untuk memaksimalkan efisiensi setup sejak awal.',
+        name: 'Paket 1',
+        price: '139',
+        originalPrice: '169.000.000',
+        description: 'Solusi kemitraan yang memberikan dukungan lebih komprehensif dalam aspek penyediaan peralatan dan pendampingan awal operasional',
         benefits: [
           'Termasuk renovasi outlet',
           'Penyediaan peralatan & furnitur lengkap',
           'Sistem operasional terintegrasi',
           'Dukungan penuh dari set up hingga operasional'
+        ]
+      },
+      {
+        name: 'Paket 2',
+        price: '179',
+        originalPrice: '219.000.000',
+        description: 'Solusi kemitraan bagi mitra yang menginginkan kesiapan usaha yang lebih matang dengan dukungan yang lebih intensif.',
+        benefits: [
+          'Termasuk rekrutmen karyawan dan pelatihan  S.O.P',
+          'Dukungan sistem operasional & supply chain',
+          'Equipment lebih lengkap',
+          'cocok untuk lokasi existing/usaha berjalan',
+          'Tidak termasuk renovasi outlet'
+        ]
+      },
+      {
+        name: 'Paket 3',
+        price: '249',
+        originalPrice: '299.000.000',
+        description: 'Solusi kemitraan menyeluruh dengan fasilitas paling lengkap yang dirancang untuk mitra yang menginginkan solusi usaha siap jalan',
+        benefits: [
+          'Termasuk rekrutmen karyawan dan pelatihan S.O.P',
+          'Penyediaan equipment lengkap',
+          'Dukungan penuh dari set up hingga operasional',
+          'Termasuk renovasi outlet maksimal 70-75 jt'
         ]
       }
     ]

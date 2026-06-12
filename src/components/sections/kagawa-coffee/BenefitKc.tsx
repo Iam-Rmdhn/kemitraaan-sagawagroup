@@ -17,8 +17,8 @@ export function BenefitKc() {
     "Akses ke jaringan supplier resmi Kagawa Coffee",
   ];
 
-  const originalPrice = 169000000;
-  const discountPrice = 139000000;
+  const originalPrice = 119000000;
+  const discountPrice = 189000000;
 
   const waMessage = `Halo Tim Kemitraan Sagawa Group! 👋\n\nSaya sangat tertarik dengan peluang bisnis kemitraan *Kagawa Coffee Conner*.\n\nMohon informasi lebih lanjut terkait:\n1. Skema kemitraan & proyeksi ROI\n2. Ketersediaan lokasi di wilayah saya\n3. Tahapan awal bergabung memanfaatkan penawaran spesial saat ini\n\nTerima kasih.`;
 
