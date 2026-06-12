@@ -86,7 +86,7 @@ export function TimelineSection() {
               },
             }}
             className="space-y-12 md:space-y-16"
-          >
+          > 
             {timelineSteps.map((step, index) => {
               const isEven = index % 2 === 0;
               return (

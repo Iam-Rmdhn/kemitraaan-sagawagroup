@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { Toaster } from "@/components/ui/sonner";
+import { SiteChrome } from "@/components/layout/SiteChrome";
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
@@ -147,10 +146,8 @@ export default function RootLayout({
           }}
         />
         <ScrollProgress />
-        <Navbar />
-        {children}
-        <FloatingWhatsApp />
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
+        <Toaster />
       </body>
     </html>
   );

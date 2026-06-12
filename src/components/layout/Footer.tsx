@@ -79,7 +79,7 @@ export function Footer() {
                 {quickLinks.map((link, i) => (
                   <li key={i}>
                     <Link href={link.href} target={link.target} className="group flex items-center text-slate-400 hover:text-red-500 transition-colors text-sm font-medium">
-                      <span className="w-0 h-[2px] bg-red-500 transition-all duration-300 ease-out group-hover:w-4 group-hover:mr-2"></span>
+                      <span className="w-0 h-0.5 bg-red-500 transition-all duration-300 ease-out group-hover:w-4 group-hover:mr-2"></span>
                       {link.label}
                     </Link>
                   </li>
@@ -94,7 +94,7 @@ export function Footer() {
                 {partnershipLinks.map((link, i) => (
                   <li key={i}>
                     <Link href={link.href} className="group flex items-center text-slate-400 hover:text-red-500 transition-colors text-sm font-medium">
-                      <span className="w-0 h-[2px] bg-red-500 transition-all duration-300 ease-out group-hover:w-4 group-hover:mr-2"></span>
+                      <span className="w-0 h-0.5 bg-red-500 transition-all duration-300 ease-out group-hover:w-4 group-hover:mr-2"></span>
                       {link.label}
                     </Link>
                   </li>
@@ -104,7 +104,7 @@ export function Footer() {
 
             <div className="md:col-span-2 lg:col-span-3 space-y-6">
               <h3 className="text-white font-bold text-lg mb-6 tracking-wide">Lokasi Kami</h3>
-              <div className="w-[250px] h-[250px] rounded-2xl overflow-hidden border border-slate-700 bg-slate-800 relative group">
+              <div className="w-62.5 h-62.5 rounded-2xl overflow-hidden border border-slate-700 bg-slate-800 relative group">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.252203261004!2d106.81291517499146!3d-6.361395793628639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eea02fda97fb%3A0x78a85036778ba600!2sJl.%20H.%20Misan%20V%20No.11%2C%20Kukusan%2C%20Kecamatan%20Beji%2C%20Kota%20Depok%2C%20Jawa%20Barat%2016425!5e0!3m2!1sid!2sid!4v1776668633986!5m2!1sid!2sid" 
                   width="100%" 
